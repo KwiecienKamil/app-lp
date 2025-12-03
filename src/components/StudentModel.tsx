@@ -58,7 +58,7 @@ const iconTex3 = useLoader(TextureLoader, icon3)
             >
               <group
                 name="Armature_103"
-                position={[0.5, 0.23, 0.001]}
+                position={[0.45, 0.2, 0.001]}
                 rotation={[Math.PI / 2, 0, 0]}
                 scale={0.9}
               >
