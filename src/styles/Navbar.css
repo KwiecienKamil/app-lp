@@ -30,7 +30,7 @@ header .nav-btn {
     align-items: center;
     justify-content: center;
     transition: 1s;
-    transform: translateX(100vh);
+    transform: translateY(100vh);
     z-index: 20;
   }
 

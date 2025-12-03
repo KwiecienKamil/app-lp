@@ -15,9 +15,9 @@ const showNavbar = () => {
         <img src={logo} alt="logo Ogarnijto.org" />
       </div>
       <nav ref={navRef} className="flex">
-        <a href="#">XXX</a>
-        <a href="#">XDX</a>
-        <a href="#">XXD</a>
+        <a href="#">Strona główna</a>
+        <a href="#">Jak używać</a>
+        <a href="https://app.ogarnijto.org/?beta=true">Sprawdź teraz</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
         <FaTimes />
       </button>

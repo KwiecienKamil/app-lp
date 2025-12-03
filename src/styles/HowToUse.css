@@ -8,7 +8,7 @@
   font-size: 3rem;
   text-align: center;
   display: inline-block;
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 .section-heading:before {
@@ -21,7 +21,11 @@
 }
 
 #how-to-use {
-  margin: 1rem 0;
+   background: var(--light);
+  color: var(--dark);
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 #how-to-use-wrapper {
@@ -33,12 +37,14 @@
   flex-direction: column;
   gap: 2rem;
 }
-
+#how-to-use div, video {
+  padding: 0 1%;
+}
 #how-to-use div h4 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 #how-to-use div p {
-  margin-top: 1rem;
+  margin-top: .5rem;
   font-size: 1.2rem;
   text-align: justify;
 }

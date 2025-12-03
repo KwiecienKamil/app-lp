@@ -11,10 +11,7 @@ const HowToUse = () => {
         <div>
           <div>
             <h4>Prosta sprawa!</h4>
-            <p>Aplikacja <strong>Ogarnijto.org</strong> pomaga uczniom zarządzać egzaminami i materiałami do nauki.
-            Użytkownicy mogą dodawać egzaminy wraz z ważnymi informacjami, otrzymywać przypomnienia e-mail
-            tydzień przed egzaminem oraz korzystać z generatora quizów, który pomaga w przygotowaniu. 
-            Wypróbuj wersję demo oraz przekonaj się że ta aplikacja jest bardzo pomocna.
+            <p>Dodaj egzaminy wraz z ważnymi informacjami, otrzymaj przypomnienia e-mail tydzień przed egzaminem oraz korzystaj z generatora quizów AI, który pomaga w przygotowaniu. Wypróbuj wersję demo i przekonaj się że ta aplikacja jest bardzo pomocna.
           </p>
           </div>
         </div>

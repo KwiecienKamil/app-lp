@@ -15,7 +15,7 @@
 }
 #home button {
   margin-top: 2rem;
-  padding: .5rem 1rem;
+  padding: 1rem 1.5rem;
   background: hsl(120, 100%, 25%);
   border: none;
   outline: none;
@@ -23,7 +23,11 @@
   font-weight: 600;
   background-color: var(--accent);
   border-radius: .3rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #figure-wrapper {
@@ -33,4 +37,17 @@
   z-index: 5;
   display: flex;
   flex-direction: column; 
+}
+
+
+@media only screen and (min-width: 800px) {
+  #home div {
+  max-width: 70%;
+  z-index: 10;
+  color: var(--light);
+}
+
+  #home div h1 {
+  font-size: 3rem;
+}
 }

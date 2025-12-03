@@ -20,7 +20,7 @@ body {
   width: 100vw;
   background: var(--dark);
   overflow: hidden;
-  padding: 1rem;
+  padding: 5%;
   color: var(--light);
 }
 
@@ -52,7 +52,19 @@ figure {
   height: 100%;
   overflow: hidden;
   position: absolute;
-  inset: 0;
+  right: 0;
+  top: 0;
   z-index: 1;
 }
 
+
+@media only screen and (min-width: 800px) {
+  #app-wrapper {
+    padding: 3rem;
+  }
+  
+}
+
+@media only screen and (min-width: 1000px) {
+    
+}

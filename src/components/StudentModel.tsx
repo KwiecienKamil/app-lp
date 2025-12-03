@@ -7,20 +7,31 @@ import { useLoader } from '@react-three/fiber'
 import icon1 from "../assets/laptop_icon.png"
 import icon2 from "../assets/smartphone_icon.png"
 import icon3 from "../assets/time_icon.png"
+import { useMediaQuery } from 'react-responsive'
 
 
 
 type StudentModelProps = React.ComponentPropsWithoutRef<'group'>
 
 export function StudentModel(props: StudentModelProps) {
-  const group = useRef<Group>(null)
-
+  const group = useRef<Group>(null);
+  const isSM = useMediaQuery({ maxWidth: 800 });
   const iconTex1 = useLoader(TextureLoader, icon1)
 const iconTex2 = useLoader(TextureLoader, icon2)
 const iconTex3 = useLoader(TextureLoader, icon3)
 
   const { nodes, materials, animations } = useGLTF('/models/student_2.glb') as any
   const { actions } = useAnimations(animations, group)
+
+    const screenWidth = typeof window !== "undefined" ? window.innerWidth : 800;
+
+  const horizontalOffset = isSM ? 0 : Math.min((screenWidth - 800) / 300, 3);
+  const verticalOffset = isSM ? 0 : Math.min((screenWidth - 800) / 400, 2);
+  const dynamicY = isSM ? 0.2 : 0.22 + verticalOffset; 
+
+  useEffect(() => {
+  console.log(horizontalOffset, verticalOffset)
+}, [horizontalOffset, verticalOffset])
 
   useEffect(() => {
   const handleMouseMove = (event: MouseEvent) => {
@@ -49,7 +60,7 @@ const iconTex3 = useLoader(TextureLoader, icon3)
         <group
           name="Sketchfab_model"
           rotation={[-Math.PI / 2, 0, 2.5]}
-          scale={2.698}
+          scale={isSM ? 2.698 : 2.3}
         >
           <group name="root">
             <group
@@ -58,7 +69,7 @@ const iconTex3 = useLoader(TextureLoader, icon3)
             >
               <group
                 name="Armature_103"
-                position={[0.45, 0.2, 0.001]}
+                position={isSM ? [0.45, 0.2, 0.001] : [0.7, dynamicY, 0.001]}
                 rotation={[Math.PI / 2, 0, 0]}
                 scale={0.9}
               >
