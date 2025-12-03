@@ -1,13 +1,23 @@
 import React, { useEffect, useRef } from 'react'
 import { Group } from 'three'
 import { useGLTF, useAnimations } from '@react-three/drei'
-import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { TextureLoader } from 'three'
+import { useLoader } from '@react-three/fiber'
+import icon1 from "../assets/laptop_icon.png"
+import icon2 from "../assets/smartphone_icon.png"
+import icon3 from "../assets/time_icon.png"
+
+
 
 type StudentModelProps = React.ComponentPropsWithoutRef<'group'>
 
 export function StudentModel(props: StudentModelProps) {
   const group = useRef<Group>(null)
+
+  const iconTex1 = useLoader(TextureLoader, icon1)
+const iconTex2 = useLoader(TextureLoader, icon2)
+const iconTex3 = useLoader(TextureLoader, icon3)
 
   const { nodes, materials, animations } = useGLTF('/models/student_2.glb') as any
   const { actions } = useAnimations(animations, group)
@@ -35,7 +45,7 @@ export function StudentModel(props: StudentModelProps) {
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Sketchfab_Scene">
+      <group name="Sketchfab_Scene"> 
         <group
           name="Sketchfab_model"
           rotation={[-Math.PI / 2, 0, 2.5]}
@@ -52,6 +62,15 @@ export function StudentModel(props: StudentModelProps) {
                 rotation={[Math.PI / 2, 0, 0]}
                 scale={0.9}
               >
+                <sprite scale={[0.05, 0.05, 0.05]} position={[0, 0, 0]}>
+                  <spriteMaterial map={iconTex1} />
+                </sprite>
+                <sprite scale={[0.05, 0.05, 0.05]} position={[0, 0, -0.08]}>
+                  <spriteMaterial map={iconTex2} />
+                </sprite>
+                <sprite scale={[0.05, 0.05, 0.05]} position={[0, 0.4, 0.04]}>
+                  <spriteMaterial map={iconTex3} />
+                </sprite>
                 <group name="GLTF_created_0">
                   <primitive object={nodes.GLTF_created_0_rootJoint} />
                   <skinnedMesh

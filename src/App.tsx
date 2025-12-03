@@ -5,6 +5,8 @@ import "./styles/App.css"
 import Navbar from "./components/Navbar.tsx"
 import Home from "./components/Home.tsx"
 import HowToUse from "./components/HowToUse.tsx"
+import Footer from "./components/Footer.tsx"
+
 
 const App = () => {
   return (
@@ -12,7 +14,8 @@ const App = () => {
       <Navbar />
       <Home />
       <HowToUse />
-      <figure
+      <Footer />
+        <figure
       >
         <Canvas
           shadows

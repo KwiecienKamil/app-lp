@@ -1,18 +1,31 @@
+import { useRef } from "react";
 import logo from "../assets/logo_OT_t.png"
 import "../styles/Navbar.css"
-const Navbar = () => {
+import { FaBars, FaTimes } from "react-icons/fa";
 
+const Navbar = () => {
+const navRef = useRef<HTMLElement | null>(null);
+
+const showNavbar = () => {
+  navRef.current?.classList.toggle("responsive_nav")
+}
   return (
-    <nav className="flex-between">
+    <header className="flex-between">
       <div>
         <img src={logo} alt="logo Ogarnijto.org" />
       </div>
-      <div className="flex">
+      <nav ref={navRef} className="flex">
         <a href="#">XXX</a>
         <a href="#">XDX</a>
         <a href="#">XXD</a>
-      </div>
-    </nav>
+        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+        <FaTimes />
+      </button>
+      </nav>
+      <button className="nav-btn" onClick={showNavbar}>
+        <FaBars />
+      </button>
+    </header>
   )
 }
 

@@ -1,3 +1,37 @@
-nav div img {
+header div img {
   max-width: 150px;
+}
+
+header .nav-btn {
+  padding: 2rem;
+  display: none;
+  z-index: 20;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  header .nav-btn {
+    display: block;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 40%;
+    background: var(--light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    transform: translateX(100vh);
+    z-index: 20;
+  }
+
+  header .responsive_nav {
+    transform: none;
+  }
+
 }
