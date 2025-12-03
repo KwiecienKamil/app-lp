@@ -1,0 +1,26 @@
+#home {
+  padding: 5rem 0;
+}
+#home div {
+  max-width: 60%;
+  z-index: 10;
+  color: var(--light);
+}
+#home div h1 {
+  font-size: 1.8rem;
+}
+#home div p {
+  font-size: .8rem;
+}
+#home button {
+  margin-top: 2rem;
+  padding: .5rem 1rem;
+  background: green;
+  border: none;
+  outline: none;
+  color: var(--dark);
+  font-weight: 600;
+  background-color: var(--accent);
+  border-radius: .3rem;
+  font-size: 1rem;
+}

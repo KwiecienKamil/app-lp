@@ -1,18 +1,18 @@
 import { Canvas } from "@react-three/fiber"
 import {StudentModel} from "./components/StudentModel.tsx"
 import { Environment, Lightformer } from "@react-three/drei"
-import "./App.css"
+import "./styles/App.css"
 import Navbar from "./components/Navbar.tsx"
 import Home from "./components/Home.tsx"
+import HowToUse from "./components/HowToUse.tsx"
 
 const App = () => {
   return (
     <div id="app-wrapper">
       <Navbar />
       <Home />
+      <HowToUse />
       <figure
-        className="absolute inset-0 z-1"
-        style={{ width: "100vw", height: "100vh", overflow: "hidden" }}
       >
         <Canvas
           shadows

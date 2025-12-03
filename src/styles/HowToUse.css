@@ -1,0 +1,52 @@
+#how-to-use-wrapper {
+  text-align: center;
+}
+
+.section-heading {
+  text-align: center;
+  position: relative;
+  font-size: 3rem;
+  text-align: center;
+  display: inline-block;
+  margin: 3rem 0;
+}
+
+.section-heading:before {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--light);
+  bottom: 0;
+  content: "";
+}
+
+#how-to-use {
+  margin: 1rem 0;
+}
+
+#how-to-use-wrapper {
+  text-align: center;
+}
+
+#how-to-use-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#how-to-use div h4 {
+  font-size: 2.5rem;
+}
+#how-to-use div p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+#how-to-use-info div img {
+  margin: 2rem 0;
+  max-width: 100%;
+}
+
+
+

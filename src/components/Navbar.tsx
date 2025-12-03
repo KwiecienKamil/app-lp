@@ -1,5 +1,7 @@
 import logo from "../assets/logo_OT_t.png"
+import "../styles/Navbar.css"
 const Navbar = () => {
+
   return (
     <nav className="flex-between">
       <div>

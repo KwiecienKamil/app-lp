@@ -48,7 +48,7 @@ export function StudentModel(props: StudentModelProps) {
             >
               <group
                 name="Armature_103"
-                position={[0.4, 0.2, 0.001]}
+                position={[0.5, 0.23, 0.001]}
                 rotation={[Math.PI / 2, 0, 0]}
                 scale={0.9}
               >
