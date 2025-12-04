@@ -16,6 +16,7 @@ type StudentModelProps = React.ComponentPropsWithoutRef<'group'>
 export function StudentModel(props: StudentModelProps) {
   const group = useRef<Group>(null);
   const isSM = useMediaQuery({ maxWidth: 800 });
+  const isMd = useMediaQuery({ maxWidth: 1000 });
   const iconTex1 = useLoader(TextureLoader, icon1)
 const iconTex2 = useLoader(TextureLoader, icon2)
 const iconTex3 = useLoader(TextureLoader, icon3)
@@ -60,7 +61,7 @@ const iconTex3 = useLoader(TextureLoader, icon3)
         <group
           name="Sketchfab_model"
           rotation={[-Math.PI / 2, 0, 2.5]}
-          scale={isSM ? 2.698 : 2.3}
+          scale={isSM ? 2.698 : 2.4}
         >
           <group name="root">
             <group
@@ -69,7 +70,7 @@ const iconTex3 = useLoader(TextureLoader, icon3)
             >
               <group
                 name="Armature_103"
-                position={isSM ? [0.45, 0.2, 0.001] : [0.7, dynamicY, 0.001]}
+                position={isSM ? [0.45, 0.2, 0.001] : [0.7, isMd ? 0.2 : 0.3, 0.001]}
                 rotation={[Math.PI / 2, 0, 0]}
                 scale={0.9}
               >

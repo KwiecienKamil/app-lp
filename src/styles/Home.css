@@ -1,6 +1,8 @@
 #home {
   padding: 5rem 0;
   position: relative;
+  z-index: 10;
+  color: var(--light);
 }
 #home div {
   max-width: 59%;
@@ -28,8 +30,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
-
+#home button:hover {
+  background: hsl(120, 87%, 22%);
+}
 #figure-wrapper {
   position: absolute;
   bottom: 0;
@@ -41,13 +46,28 @@
 
 
 @media only screen and (min-width: 800px) {
+  #home {
+    padding: 8rem 0;
+  }
   #home div {
   max-width: 70%;
-  z-index: 10;
-  color: var(--light);
 }
 
   #home div h1 {
   font-size: 3rem;
 }
+}
+
+@media only screen and (min-width: 1200px) {
+  #home div {
+  max-width: 60%;
+}
+
+#home div h1 {
+  font-size: 4rem;
+}
+
+#home {
+    padding: 10rem 0;
+  }
 }

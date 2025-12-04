@@ -8,7 +8,7 @@
   font-size: 3rem;
   text-align: center;
   display: inline-block;
-  margin: 2rem 0;
+  margin: 2rem;
 }
 
 .section-heading:before {
@@ -21,11 +21,11 @@
 }
 
 #how-to-use {
-   background: var(--light);
+  background: var(--light);
   color: var(--dark);
   border-radius: 1rem;
   padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  margin: 10rem 0 2rem 0 ;
 }
 
 #how-to-use-wrapper {
