@@ -1,0 +1,12 @@
+.how-to-use-option {
+  background: rgba(29, 43, 75, 0.4);  
+  backdrop-filter: blur(12px); 
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.how-to-use-option p {
+    margin-top: 1rem;
+    font-size: .9rem;
+}

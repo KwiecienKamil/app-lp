@@ -1,24 +1,27 @@
 import "../styles/HowToUse.css"
-import appVideo1 from "../assets/AppVideo1.mp4"
+import { appVideos } from "../utils/Helpers"
+import VideoCard from "./UI/VideoCard"
+import appVideo from "../assets/AppVideo1.mp4"
 
 const HowToUse = () => {
   return (
     <section id="how-to-use">
-      <div id="how-to-use-wrapper">
-        <h2 className="section-heading">Jak używać</h2>
+      <h2>Pełna kontrola</h2>
+      <div className="flex-between how-to-use-options-wrapper">
+        {appVideos.map((videoComponent) => (
+          <VideoCard 
+          id={videoComponent.id}
+          title={videoComponent.title}
+          desc={videoComponent.desc}
+          icon={videoComponent.icon}
+          video={videoComponent.video}
+          />
+        ))}
       </div>
-        <div id="how-to-use-info">  
-        <div>
-          <div>
-            <h4>Prosta sprawa!</h4>
-            <p>Dodaj egzaminy wraz z ważnymi informacjami, otrzymaj przypomnienia e-mail tydzień przed egzaminem oraz korzystaj z generatora quizów AI, który pomaga w przygotowaniu. Wypróbuj wersję demo i przekonaj się że ta aplikacja jest bardzo pomocna.
-          </p>
-          </div>
-        </div>
-         <video autoPlay muted controls id="hero-video">
-            <source src={appVideo1} type="video/mp4"></source>
-            </video>
-        </div>
+      <video
+        src={appVideo}
+        >
+        </video>
       </section>
   )
 }
