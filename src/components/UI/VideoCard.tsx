@@ -2,12 +2,12 @@ import type { FC } from "react"
 import type { VideoCardProps } from "../../types/VideoCardProps"
 import "../../styles/VideoCard.css"
 
-const VideoCard:FC<VideoCardProps> = ({id, title, desc, icon, video}) => {
-  
+const VideoCard:FC<VideoCardProps> = ({ id, title, desc, icon, active, onClick }) => {
     return (
     <div 
     key={id}
-    className="how-to-use-option"
+    onClick={onClick}
+    className={`how-to-use-option ${active ? "active" : ""}`}
     >
       <div className="flex">
         <span>{icon}</span>

@@ -4,9 +4,16 @@
   font-size: 1rem;
   padding: 1rem;
   border-radius: 10px;
+  z-index: 20;
 }
 
 .how-to-use-option p {
     margin-top: 1rem;
     font-size: .9rem;
 }
+
+.active, .how-to-use-option:hover {
+    background-color: var(--accent);
+    color: var(--dark);
+    font-weight: 600;
+  }

@@ -2,6 +2,7 @@ import { AiOutlineOrderedList } from "react-icons/ai";
 import { BsRobot } from "react-icons/bs";
 import { FaClipboardCheck } from "react-icons/fa";
 import appVideo1 from "../assets/AppVideo1.mp4"
+import appVideo2 from "../assets/AppVideo2.mp4"
 
 export const appVideos = [
     {
@@ -16,7 +17,7 @@ export const appVideos = [
         title: "Dostęp",
         desc: "Przechowuj swoje egzaminy w jednym miejscu",
         icon: <FaClipboardCheck />,
-        video: appVideo1,
+        video: appVideo2,
     },
     {
         id: 3,

@@ -1,25 +1,38 @@
 import "../styles/HowToUse.css"
 import { appVideos } from "../utils/Helpers"
 import VideoCard from "./UI/VideoCard"
-import appVideo from "../assets/AppVideo1.mp4"
+import { useState } from "react"
 
 const HowToUse = () => {
+   const [activeCard, setActiveCard] = useState<number | null>(1)
+   const [currentVideo, setCurrentVideo] = useState<string>(appVideos[0].video)
+
+   console.log(currentVideo)
+
   return (
     <section id="how-to-use">
       <h2>Pełna kontrola</h2>
       <div className="flex-between how-to-use-options-wrapper">
         {appVideos.map((videoComponent) => (
           <VideoCard 
+          key={videoComponent.id}
           id={videoComponent.id}
           title={videoComponent.title}
           desc={videoComponent.desc}
           icon={videoComponent.icon}
-          video={videoComponent.video}
+          active={activeCard === videoComponent.id}
+          onClick={() => {
+            setActiveCard(videoComponent.id)
+            setCurrentVideo(videoComponent.video)
+          }
+          }
           />
         ))}
       </div>
       <video
-        src={appVideo}
+        src={currentVideo}
+        controls
+        autoPlay
         >
         </video>
       </section>
