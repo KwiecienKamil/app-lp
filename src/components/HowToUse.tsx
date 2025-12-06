@@ -7,8 +7,6 @@ const HowToUse = () => {
    const [activeCard, setActiveCard] = useState<number | null>(1)
    const [currentVideo, setCurrentVideo] = useState<string>(appVideos[0].video)
 
-   console.log(currentVideo)
-
   return (
     <section id="how-to-use">
       <h2>Pełna kontrola</h2>
