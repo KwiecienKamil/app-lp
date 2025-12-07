@@ -30,9 +30,6 @@ const iconTex3 = useLoader(TextureLoader, icon3)
   const verticalOffset = isSM ? 0 : Math.min((screenWidth - 800) / 400, 2);
   const dynamicY = isSM ? 0.2 : 0.22 + verticalOffset; 
 
-  useEffect(() => {
-  console.log(horizontalOffset, verticalOffset)
-}, [horizontalOffset, verticalOffset])
 
   useEffect(() => {
   const handleMouseMove = (event: MouseEvent) => {
@@ -61,7 +58,7 @@ const iconTex3 = useLoader(TextureLoader, icon3)
         <group
           name="Sketchfab_model"
           rotation={[-Math.PI / 2, 0, 2.5]}
-          scale={isSM ? 2.698 : 2.4}
+          scale={isSM ? 2.698 : 2.45}
         >
           <group name="root">
             <group
@@ -70,7 +67,7 @@ const iconTex3 = useLoader(TextureLoader, icon3)
             >
               <group
                 name="Armature_103"
-                position={isSM ? [0.45, 0.2, 0.001] : [0.7, isMd ? 0.2 : 0.3, 0.001]}
+                position={isSM ? [0.45, 0.2, 0.001] : [0.7, isMd ? 0.2 : 0.25, 0.001]}
                 rotation={[Math.PI / 2, 0, 0]}
                 scale={0.9}
               >

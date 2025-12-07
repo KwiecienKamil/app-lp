@@ -11,6 +11,7 @@ import Footer from "./components/Footer.tsx"
 const App = () => {
   return (
     <div id="app-wrapper">
+      <div id="app-layout-wrapper">
       <Navbar />
       <Home />
       <HowToUse />
@@ -53,6 +54,7 @@ const App = () => {
           </Environment>
         </Canvas>
       </figure>
+      </div>
     </div>
   )
 }
