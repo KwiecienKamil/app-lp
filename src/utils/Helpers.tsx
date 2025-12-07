@@ -22,7 +22,7 @@ export const appVideos = [
     {
         id: 3,
         title: "AI",
-        desc: "Przechowuj swoje egzaminy w jednym miejscu",
+        desc: "Dodaj plik pdf i pozwól sztucznej inteligencji ",
         icon: <BsRobot />,
         video: appVideo1,
     },

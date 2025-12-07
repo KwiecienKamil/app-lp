@@ -17,7 +17,7 @@ const showNavbar = () => {
       <nav ref={navRef} className="flex">
         <a href="#">Strona główna</a>
         <a href="#">Jak używać</a>
-        <a href="https://app.ogarnijto.org/?beta=true">Sprawdź teraz</a>
+        <a href="https://app.ogarnijto.org/?beta=true">Kontakt</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
         <FaTimes />
       </button>
