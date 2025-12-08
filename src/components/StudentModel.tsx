@@ -58,7 +58,7 @@ const iconTex3 = useLoader(TextureLoader, icon3)
         <group
           name="Sketchfab_model"
           rotation={[-Math.PI / 2, 0, 2.5]}
-          scale={isSM ? 2.698 : 2.45}
+          scale={isSM ? 2.698 : 3}
         >
           <group name="root">
             <group
@@ -67,7 +67,7 @@ const iconTex3 = useLoader(TextureLoader, icon3)
             >
               <group
                 name="Armature_103"
-                position={isSM ? [0.45, 0.2, 0.001] : [0.7, isMd ? 0.2 : 0.25, 0.001]}
+                position={isSM ? [0.45, 0.1, 0.001] : [0.7, isMd ? 0.1 : 0.15, 0.001]}
                 rotation={[Math.PI / 2, 0, 0]}
                 scale={0.9}
               >

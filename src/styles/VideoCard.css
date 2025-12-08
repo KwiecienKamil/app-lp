@@ -5,6 +5,9 @@
   padding: 1rem;
   border-radius: 10px;
   z-index: 20;
+  cursor: pointer;
+  transition: .3s;
+  font-weight: 600;
 }
 
 .how-to-use-option p {
@@ -15,5 +18,13 @@
 .active, .how-to-use-option:hover {
     background-color: var(--accent);
     color: var(--dark);
-    font-weight: 600;
+  }
+
+  @media screen and (min-width: 1200px ) {
+    .how-to-use-option p {
+      font-size: 1.2rem;
+    }
+    .how-to-use-option {
+      font-size: 1.5rem;
+    }
   }
