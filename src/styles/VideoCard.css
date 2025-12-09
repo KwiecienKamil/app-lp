@@ -16,7 +16,7 @@
 }
 
 .active, .how-to-use-option:hover {
-    background-color: var(--accent);
+    background-color: var(--accentHover);
     color: var(--dark);
   }
 

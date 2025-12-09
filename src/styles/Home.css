@@ -33,7 +33,7 @@
   cursor: pointer;
 }
 #home button:hover {
-  background: hsl(120, 87%, 22%);
+  background: var(--accentHover);
 }
 #figure-wrapper {
   position: absolute;

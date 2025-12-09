@@ -3,6 +3,7 @@
   --light: #e8e8e8;
   --dark: #111827;
   --accent: #0dd186;
+  --accentHover: #0fb173;
 }
 * {
   padding: 0;
